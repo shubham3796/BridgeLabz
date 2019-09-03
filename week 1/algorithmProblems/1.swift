@@ -1,58 +1,50 @@
-//
-//  main.swift
-//  algo1
-//
-//  Created by admin on 22/08/19.
-//  Copyright © 2019 admin. All rights reserved.
-//
-
 import Foundation
 
-var strA=[Character]()
-var strB=[Character]()
-strA.append(" ")
-strB.append(" ")
-var len:Int
+var stringA=[Character]()
+var stringB=[Character]()
+stringA.append(" ")
+stringB.append(" ")
 
 print("Enter string 1:")
-var temp=readLine()
-strA=temp!+strA
+var temporaryVariable=readLine()
+stringA=temp!+stringA
 
 print("Enter string 2:")
- temp=readLine()
-strB=temp!+strB
+ temporaryVariable=readLine()
+stringB=temp!+stringB
 
 
-var lenA=strA.count
-var lenB=strB.count
+var lengthA=stringA.count
+var lengthB=stringB.count
 
 
-if lenA==lenB {
-    var i:Int
-    var j:Int
-    var temp2:Character
+if lengthA==lengthB {
+    var iteratorA:Int
+    var iteratorB:Int
+    var temporaryVariable2:Character
     
-    for i in 0...(lenA-2) {
-        for j in i+1...(lenA-1){
-            if strA[j]<strA[i] {
-                temp2=strA[j]
-                strA[j]=strA[i]
-                strA[i]=temp2
+ //Sorting string A
+    for iteratorA in 0...(lengthA-2) {
+        for iteratorB in iteratorA+1...(lengthA-1){
+            if stringA[iteratorB]<stringA[iteratorA] {//Swap the two
+                temporaryVariable2=stringA[iteratorB]
+                stringA[iteratorB]=stringA[iteratorA]
+                stringA[iteratorA]=temporaryVariable2
+            }
+        }
+    }
+    //Sorting string B 
+    for iteratorA in 0...(lengthB-2) {
+        for j in iteratorA+1...(lengthB-1){
+            if stringA[iteratorB]<stringA[iteratorA] {//Swap the two
+                temporaryVariable2=stringA[iteratorB]
+                stringA[iteratorB]=stringA[iteratorA]
+                stringA[iteratorA]=temporaryVariable2
             }
         }
     }
     
-    for i in 0...(lenB-2) {
-        for j in i+1...(lenB-1){
-            if strB[j]<strB[i] {
-                temp2=strB[j]
-                strB[j]=strB[i]
-                strB[i]=temp2
-            }
-        }
-    }
-    
-    if strA==strB {
+    if stringA==stringB {
         print("Anagram")
     }
     else{
