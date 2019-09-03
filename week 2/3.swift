@@ -9,8 +9,13 @@ struct Stack {
         top+=1
     }
     mutating func pop() -> Character {
-        top-=1
-        return array[top]
+        if top == -1 {
+            return "@"
+        }
+        else {
+            top = -1
+            return array[top+1]
+        }
     }
     mutating func peep() -> Character {
         return array[top]
@@ -29,21 +34,17 @@ var stackOfBraces = Stack()
 var expression:String
 print("Enter the expression")
 expression=readLine()!
-var flag=0
 
-for i in expression {
-    if i==")" {
-        let tempCharacter=stackOfBraces.pop()
-        if tempCharacter == "(" {
-            //
-        }
-        else {
+for character in expression {
+    if character==")" {
+        let temporaryCharacter=stackOfBraces.pop()
+        if temporaryCharacter != "(" {
             print("False")//Unbalanced parentheses
-            flag=1
+            exit(0)
         }
     }
-    else if i=="(" {
-        stackOfBraces.push(value: i)
+    else if character=="(" {
+        stackOfBraces.push(value: character)
     }
 }
 if stackOfBraces.isEmpty() {
