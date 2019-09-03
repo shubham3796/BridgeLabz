@@ -22,20 +22,20 @@ public class LinkedList<T : Equatable>{
     }
     
     public var printList:String {
-        var tempString = ""
+        var temporaryString = ""
         var node = head
         while node != nil {
-            tempString += node!.value as! String
+            temporaryString += node!.value as! String
             if node!.next != nil {
                 
-                tempString+=","
+                temporaryString+=" "
             }
             node = node!.next
         }
-        tempString += ""
-        return tempString
+        temporaryString += ""
+        return temporaryString
     }//end printList definition
-
+    
     
     public var isEmpty:Bool {
         return head == nil
@@ -74,7 +74,7 @@ public class LinkedList<T : Equatable>{
         return count
         
     }
-
+    
     public func deleteViaPosition(nodePosition:Int) {
         var node = head
         if nodePosition == 1 {
@@ -96,23 +96,22 @@ public class LinkedList<T : Equatable>{
     
 }
 
+//Input a sentence as a list of strings(words) and store them as array of strings
 
+var array : [String]
+var size=0
+let myFirstList = LinkedList<String>()
 
-
-let inputLocation = NSString(string:"/Users/admin/Desktop//BridgeLabz/week 2/textToRead.txt").expandingTildeInPath
+let inputLocation = NSString(string:"/Users/admin/Documents/textToRead.txt").expandingTildeInPath
 do {
     
     let fileContent = try NSString(contentsOfFile: inputLocation, encoding: String.Encoding.utf8.rawValue)
     print(fileContent)
     
     
-    var array = fileContent.components(separatedBy: " ")
+    array = fileContent.components(separatedBy: " ")
+    size = array.count-1
     
-    
-    
-    
-    var size = array.count-1
-    let myFirstList = LinkedList<String>()
     
     var i = 0
     
@@ -124,51 +123,61 @@ do {
     print("The list is :\(myFirstList.printList) ")
     
     
-    print("Type the string to be searched")
-    var temp=readLine()
-    var stringToSearch=String(temp!)
-    var stringPosition=myFirstList.search(value: stringToSearch)
-    if stringPosition == -1 {
-        myFirstList.append(value: stringToSearch)
-    }
-    else {
-        myFirstList.deleteViaPosition(nodePosition: stringPosition)
-    }
-    print("The list is :    \(myFirstList.printList) ")
-    
-    
-    let fileName = "ouput.txt"
-    var filePath = ""
-    
-    // Fine documents directory on device
-    let dirs : [String] = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true)
-    
-    if dirs.count > 0 {
-        let dir = dirs[0] //documents directory
-        filePath = dir.appending("/" + fileName)
-        print("Local path where the output file is saved = \(filePath)")
-    } else {
-        print("Could not find local directory to store file")
-        //return
-    }
-    
-    // Set the contents
-    let fileContentToWrite = myFirstList.printList
-    
-    do {
-        // Write contents to file
-        try fileContentToWrite.write(toFile: filePath, atomically: false, encoding: String.Encoding.utf8)
-    }
-    catch let error as NSError {
-        print("An error took place: \(error)")
-    }
-
-    
-    
-    
 }
 catch let error {
     print(error.localizedDescription)
 }
+
+
+var exitFlag=0
+
+while exitFlag != 1 { 
+    
+    print("Type the string to be searched or type END to exit")
+    var temporaryVariable=readLine()
+    var stringToSearch=String(temporaryVariable!)
+    if stringToSearch == "END" {
+        exitFlag=1
+    }
+    else {
+        var stringPosition=myFirstList.search(value: stringToSearch)
+        if stringPosition == -1 {
+            myFirstList.append(value: stringToSearch)
+        }
+        else {
+            myFirstList.deleteViaPosition(nodePosition: stringPosition)
+        }
+        print("The list is :    \(myFirstList.printList) ")
+        
+        
+        let fileName = "textToRead.txt"
+        var filePath = ""
+        
+        // Fine documents directory on device
+        let dirs : [String] = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true)
+        
+        if dirs.count > 0 {
+            let dir = dirs[0] //documents directory
+            filePath = dir.appending("/" + fileName)
+            print("Local path where the output file is saved = \(filePath)")
+        } else {
+            print("Could not find local directory to store file")
+            //return
+        }
+        
+        // Set the contents
+        let fileContentToWrite = myFirstList.printList
+        
+        do {
+            // Write contents to file
+            try fileContentToWrite.write(toFile: filePath, atomically: false, encoding: String.Encoding.utf8)
+        }
+        catch let error as NSError {
+            print("An error took place: \(error)")
+        }
+    }
+    
+}
+
 
 
