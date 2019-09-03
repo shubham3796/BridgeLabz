@@ -1,7 +1,4 @@
-
 import Foundation
-
-
 
 //Declaring the Node class
 public class Node<T> {
@@ -44,23 +41,17 @@ public class LinkedList<T : Equatable>{
     
     
     public func appendInAscendingOrder(value: T) {
-        print("Appending \(value)")
-        print(printList)
         let newNode = Node(val: value )
         if tail==nil {
-            print("flag1")//If list is empty, head=tail=nil
+            //If list is empty, head=tail=nil
             head=newNode
             tail=newNode
             return
         }
         else {
-             print("flag2")
-            
             var nodePointer = head
-            while  ( Int(nodePointer!.value as! String)! < Int(value as! String)! ) {
-                 print("flag3")
+            while   Int(nodePointer!.value as! String)! < Int(value as! String)!  {
                 if nodePointer!.next == nil {//insertion at last location
-                     print("flag4")
                     newNode.previous = tail
                     tail!.next = newNode
                     tail = newNode
@@ -71,7 +62,6 @@ public class LinkedList<T : Equatable>{
             
             
             if (value as! String) < (head!.value as! String) {//insert at first location when list is not empty
-                 print("flag5")
                 newNode.next=head
                 head!.previous=newNode
                 head=newNode
@@ -81,7 +71,6 @@ public class LinkedList<T : Equatable>{
                 nodePointer!.previous!.next=newNode
                 newNode.next=nodePointer
             }//end else
-             print("flag6")
             nodePointer!.previous!.next=newNode
             newNode.next=nodePointer
             newNode.previous=nodePointer?.previous
@@ -131,21 +120,21 @@ public class LinkedList<T : Equatable>{
     
 }
 
+let myFirstList = LinkedList<String>()
 
+//Read a list of numbers as a list of strings and store in an array, searching and inserting/deleting the number
 
-
-let inputLocation = NSString(string:"/Users/admin/Desktop//BridgeLabz/week 2/textToRead2.txt").expandingTildeInPath
+let inputLocation = NSString(string:"/Users/admin/Documents/textToRead2.txt").expandingTildeInPath
 do {
     
     let fileContent = try NSString(contentsOfFile: inputLocation, encoding: String.Encoding.utf8.rawValue)
-    print(fileContent)
+    //print(fileContent)
     
     
-    let array = fileContent.components(separatedBy: " ")
-    
+    var array = fileContent.components(separatedBy: ",")
     let size = array.count-1
-    let myFirstList = LinkedList<String>()
-    
+    array[size] =  String(array[size].filter { !" \n\t\r".contains($0) })//Since last string is accompanied by '\n'
+    //print("\(array):")
     var i = 0
     
     while i <= size
@@ -153,54 +142,60 @@ do {
         myFirstList.appendInAscendingOrder(value: array[i])
         i = i + 1
     }
-    print("The list is :\(myFirstList.printList) ")
-    
-    
-    print("Type the string to be searched")
-    let temp=readLine()
-    let stringToSearch=String(temp!)
-    let stringPosition=myFirstList.search(value: stringToSearch)
-    if stringPosition == -1 {
-        myFirstList.appendInAscendingOrder(value: stringToSearch)
-    }
-    else {
-        myFirstList.deleteViaPosition(nodePosition: stringPosition)
-    }
-    print("The list is :    \(myFirstList.printList) ")
-    
-    
-    let fileName = "ouput2.txt"
-    var filePath = ""
-    
-    // Fine documents directory on device
-    let dirs : [String] = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true)
-    
-    if dirs.count > 0 {
-        let dir = dirs[0] //documents directory
-        filePath = dir.appending("/" + fileName)
-        print("Local path where the output file is saved = \(filePath)")
-    } else {
-        print("Could not find local directory to store file")
-        //return
-    }
-    
-    // Set the contents
-    let fileContentToWrite = myFirstList.printList
-    
-    do {
-        // Write contents to file
-        try fileContentToWrite.write(toFile: filePath, atomically: false, encoding: String.Encoding.utf8)
-    }
-    catch let error as NSError {
-        print("An error took place: \(error)")
-    }
-    
-    
+    print("The list is : \(myFirstList.printList)")
     
     
 }
 catch let error {
     print(error.localizedDescription)
+}
+
+var exitFlag=0
+while exitFlag==0 {
+    print("Type the string to be searched, or type 'END' to exit")
+    let temporaryString=readLine()
+    let stringToSearch=String(temporaryString!)
+    if stringToSearch != "END" {
+        let stringPosition=myFirstList.search(value: stringToSearch)
+        if stringPosition == -1 {
+            myFirstList.appendInAscendingOrder(value: stringToSearch)
+        }
+        else {
+            myFirstList.deleteViaPosition(nodePosition: stringPosition)
+        }
+        print("The list is :    \(myFirstList.printList) ")
+        
+        
+        let fileName = "textToRead2.txt"
+        var filePath = ""
+        
+        // Fine documents directory on device
+        let dirs : [String] = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true)
+        
+        if dirs.count > 0 {
+            let dir = dirs[0] //documents directory
+            filePath = dir.appending("/" + fileName)
+            print("Local path where the output file is saved = \(filePath)")
+        } else {
+            print("Could not find local directory to store file")
+            //return
+        }
+        
+        // Set the contents
+        let fileContentToWrite = myFirstList.printList
+        
+        do {
+            // Write contents to file
+            try fileContentToWrite.write(toFile: filePath, atomically: false, encoding: String.Encoding.utf8)
+        }
+        catch let error as NSError {
+            print("An error took place: \(error)")
+        }
+    }
+    else {
+        exitFlag=1
+    }
+    
 }
 
 
