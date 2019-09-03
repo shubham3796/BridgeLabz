@@ -5,7 +5,7 @@ class Node {
     var action:Int
     var amount:Int
     var next:Node?
-     init(action:Int,amount:Int) {
+    init(action:Int,amount:Int) {
         self.action=action
         self.amount=amount
     }
@@ -17,9 +17,9 @@ class LinkedList {
         return head
     }
     private var tail:Node?
-    public var last:Node?{
+    /*public var last:Node?{
         return tail
-    }
+    }*/
     private var balance=0
     //private var flagUnbalanced=0
     
@@ -28,7 +28,7 @@ class LinkedList {
             balance += amount
         }
         else if action==1{//withdraw
-            if balance<0 {//UNBALANCED OPERATION
+            if balance<amount {//UNBALANCED OPERATION
                 return 0
             }
             else {
