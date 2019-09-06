@@ -1,31 +1,6 @@
 
 import Foundation
 
-
-class DeckOfCards {
-    var clubs=[String]()
-    var diamonds=[String]()
-    var hearts=[String]()
-    var spade=[String]()
-    
-    func addCard(_ value:String) {
-        clubs.append(value)
-        diamonds.append(value)
-        hearts.append(value)
-        spade.append(value)
-    }
-    func initializeDeckOfCards () {
-        addCard("NULL")
-        addCard("ACE")
-        for i in 2...10 {
-            addCard("\(i+2)")
-        }
-        addCard("JACK")
-        addCard("QUEEN")
-        addCard("KING")
-    }
-}
-
 struct card{
     var suitNumber:Int
     var cardNumber:Int
@@ -80,13 +55,10 @@ struct player{
 }
 
 class DistributeCards {
-    var deckOfCards:DeckOfCards
     var arrayOfCards = [[Bool]]()
     var arrayOfPlayers = [player]()
 
     init() {
-        self.deckOfCards=DeckOfCards()
-        deckOfCards.initializeDeckOfCards()
         for suitNumber in 0...3{
             arrayOfCards.append([])
             for cardNumber in 0...13{
