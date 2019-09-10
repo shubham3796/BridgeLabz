@@ -1,0 +1,19 @@
+{
+  "Food_Factory": [
+    {
+      "name": "Rice",
+      "weight": 200,
+      "price": 5
+    },
+    {
+      "name": "Pulses",
+      "weight": 200,
+      "price": 9
+    },
+    {
+      "name": "Wheat",
+      "weight": 70,
+      "price": 7
+    }
+  ]
+}
