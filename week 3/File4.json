@@ -1,0 +1,22 @@
+{
+    "InventoryFactory": [
+        {
+            "stockName": "A",
+            "numberOfShares": 200,
+            "sharePrice": 5.0,
+            "stockValue": 0.0
+        },
+        {
+            "stockName": "B",
+            "numberOfShares": 100,
+            "sharePrice": 7.0,
+            "stockValue": 0.0
+        },
+        {
+            "stockName": "C",
+            "numberOfShares": 150,
+            "sharePrice": 8.0,
+            "stockValue": 0.0
+        }
+    ]
+}
