@@ -1,0 +1,3 @@
+protocol ComputerProtocol {
+    func printSystemDetails()
+}
