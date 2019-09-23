@@ -1,0 +1,19 @@
+[
+	{"name":"Shubham",
+	"age":24,
+	"city":"Durg"},
+
+	{"name":"Sudipta",
+	"age":24,
+	"city":"Kolkata"},
+
+
+	{"name":"Ravindra",
+	"age":22,
+	"city":"Jaipur"},
+
+	{"name":"Vishnu",
+	"age":22,
+	"city":"Patna"}
+	
+]
