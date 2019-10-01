@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840537E7233CA31300F110B3 /* AlertMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840537E6233CA31300F110B3 /* AlertMessageViewController.swift */; };
+		841B25A12336138D00B285FF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B25A02336138D00B285FF /* SecondViewController.swift */; };
+		841B25AA23363F7100B285FF /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B25A923363F7100B285FF /* UserDetails.swift */; };
+		841B25AE2338973A00B285FF /* AfterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B25AD2338973A00B285FF /* AfterLoginViewController.swift */; };
 		8423CE242334F55F0060B1EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423CE232334F55F0060B1EB /* AppDelegate.swift */; };
 		8423CE262334F55F0060B1EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423CE252334F55F0060B1EB /* ViewController.swift */; };
 		8423CE292334F55F0060B1EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8423CE272334F55F0060B1EB /* Main.storyboard */; };
@@ -14,6 +18,8 @@
 		8423CE2E2334F5620060B1EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8423CE2C2334F5620060B1EB /* LaunchScreen.storyboard */; };
 		8423CE392334F5620060B1EB /* loginRegisterPortalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423CE382334F5620060B1EB /* loginRegisterPortalTests.swift */; };
 		8423CE442334F5620060B1EB /* loginRegisterPortalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8423CE432334F5620060B1EB /* loginRegisterPortalUITests.swift */; };
+		84CF7486233A1718009D00F4 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF7485233A1718009D00F4 /* KeychainWrapper.swift */; };
+		84CF7488233A1D42009D00F4 /* keychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF7487233A1D42009D00F4 /* keychainItemAccessibility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		840537E6233CA31300F110B3 /* AlertMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessageViewController.swift; sourceTree = "<group>"; };
+		841B25A02336138D00B285FF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		841B25A923363F7100B285FF /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		841B25AD2338973A00B285FF /* AfterLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLoginViewController.swift; sourceTree = "<group>"; };
 		8423CE202334F55F0060B1EB /* loginRegisterPortal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loginRegisterPortal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8423CE232334F55F0060B1EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8423CE252334F55F0060B1EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,8 @@
 		8423CE3F2334F5620060B1EB /* loginRegisterPortalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = loginRegisterPortalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8423CE432334F5620060B1EB /* loginRegisterPortalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginRegisterPortalUITests.swift; sourceTree = "<group>"; };
 		8423CE452334F5620060B1EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CF7485233A1718009D00F4 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		84CF7487233A1D42009D00F4 /* keychainItemAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keychainItemAccessibility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +109,18 @@
 		8423CE222334F55F0060B1EB /* loginRegisterPortal */ = {
 			isa = PBXGroup;
 			children = (
+				841B25AD2338973A00B285FF /* AfterLoginViewController.swift */,
+				841B25A923363F7100B285FF /* UserDetails.swift */,
+				84CF7485233A1718009D00F4 /* KeychainWrapper.swift */,
 				8423CE232334F55F0060B1EB /* AppDelegate.swift */,
 				8423CE252334F55F0060B1EB /* ViewController.swift */,
+				84CF7487233A1D42009D00F4 /* keychainItemAccessibility.swift */,
 				8423CE272334F55F0060B1EB /* Main.storyboard */,
 				8423CE2A2334F5620060B1EB /* Assets.xcassets */,
 				8423CE2C2334F5620060B1EB /* LaunchScreen.storyboard */,
 				8423CE2F2334F5620060B1EB /* Info.plist */,
+				841B25A02336138D00B285FF /* SecondViewController.swift */,
+				840537E6233CA31300F110B3 /* AlertMessageViewController.swift */,
 			);
 			path = loginRegisterPortal;
 			sourceTree = "<group>";
@@ -256,8 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841B25A12336138D00B285FF /* SecondViewController.swift in Sources */,
 				8423CE262334F55F0060B1EB /* ViewController.swift in Sources */,
 				8423CE242334F55F0060B1EB /* AppDelegate.swift in Sources */,
+				84CF7486233A1718009D00F4 /* KeychainWrapper.swift in Sources */,
+				841B25AE2338973A00B285FF /* AfterLoginViewController.swift in Sources */,
+				84CF7488233A1D42009D00F4 /* keychainItemAccessibility.swift in Sources */,
+				840537E7233CA31300F110B3 /* AlertMessageViewController.swift in Sources */,
+				841B25AA23363F7100B285FF /* UserDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

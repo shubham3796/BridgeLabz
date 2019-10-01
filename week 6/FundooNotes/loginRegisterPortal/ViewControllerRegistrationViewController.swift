@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  ViewControllerRegistrationViewController.swift
 //  loginRegisterPortal
 //
 //  Created by admin on 21/09/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class ViewControllerRegistration: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
