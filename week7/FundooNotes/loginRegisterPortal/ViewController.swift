@@ -10,11 +10,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
             super.viewDidLoad()
-        
-//        if UserDefaults.standard.bool(forKey: "USERISLOGIN") == true {
-//            let afterLoginVC = self.storyboard?.instantiateViewController(withIdentifier:"AfterLoginViewcontroller") as! AfterLoginViewController
-//            self.navigationController?.pushViewController(afterLoginVC, animated: false )
-//        }
             GetData.readFromJsonFile() //Read and store the contents of the file "login.json" in the array "myArrayOfInventory"
             self.navigationItem.leftBarButtonItem=nil
             self.navigationItem.hidesBackButton=true
@@ -49,6 +44,7 @@ class ViewController: UIViewController {
     @IBAction func doRegisterClick(_ sender: UIButton) {
         performSegue(withIdentifier: "register", sender: self)
     }
+    
     @IBAction func doOnLoginClick(_ sender: UIButton) {
         if checkUsernamePassword() {//i.e. if user details have matched
             

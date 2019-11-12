@@ -1,10 +1,3 @@
-//
-//  EditNote.swift
-//  loginRegisterPortal
-//
-//  Created by admin on 05/10/19.
-//  Copyright © 2019 admin. All rights reserved.
-//
 
 import UIKit
 import CoreData
@@ -15,14 +8,12 @@ class EditNote: UIViewController {
     
     @IBOutlet weak var noteTitle: UITextField!
     var previousTitle=""
-    
+    var noteIndex : Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         previousTitle = GetData.titleOfNoteToBeEdited
         noteTitle.text = GetData.titleOfNoteToBeEdited
         note.text = GetData.textOfNoteToBeEdited
-        
-        
         // Do any additional setup after loading the view.
     }
     
@@ -83,12 +74,11 @@ class EditNote: UIViewController {
     @IBAction func back(_ sender: UIButton) {
         performSegue(withIdentifier: "editedNote", sender: self)
     }
+    
     @IBAction func saveNote(_ sender: UIButton) {
         let title = self.noteTitle.text
         let text = self.note.text
         
         updateNote(title!,text!)
     }
-    
-
 }

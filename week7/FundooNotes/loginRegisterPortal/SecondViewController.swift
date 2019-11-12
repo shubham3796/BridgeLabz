@@ -26,22 +26,11 @@ class SecondViewController: UIViewController {
         let alertMessage = AlertMessageViewController.AlertMessage(uiViewController: self,title: "Message",receivedMessage: receivedMessage,receivedOption: "OK")
         AlertMessageViewController.displayMessage(as: alertMessage)
     }
-    
-//    func createData() {
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return}
-//
-//        let managedContext = appDelegate.persistentContainer.viewContext
-//
-//        let userEntity = NSEntityDescription.entity(forEntityName: "User",in: managedContext)!
-//
-//        let user = NSManagedObject(entity:userEntity. insertInfo: managedContext)
-//        user.serValue(userNameTextField.text, forKeyPath: "userName")
-//
-//    }
 
     @IBAction func backButtonClick(_ sender: UIButton) {
          performSegue(withIdentifier: "backToLoginPage", sender: self)
     }
+    
     @IBAction func doOnRegisterClick(_ sender: UIButton) {
         var alertMessageFlag : Bool
         
@@ -56,7 +45,6 @@ class SecondViewController: UIViewController {
             if alertMessageFlag == true {
                 displayAlertMessage(as: "Registration Successful!")
             }
-            //createData()
         }
         else
         {//Show this message on app screen if passwords don't match.

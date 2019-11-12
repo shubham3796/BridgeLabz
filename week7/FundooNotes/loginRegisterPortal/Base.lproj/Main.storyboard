@@ -177,7 +177,6 @@
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G2W-xZ-V6w">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="euX-DC-sj4">
                                     <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -193,8 +192,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tH3-ya-Vg8">
-                                                    <rect key="frame" x="0.0" y="20" width="100" height="80"/>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                    <rect key="frame" x="0.0" y="20" width="100" height="46"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -202,22 +200,20 @@
                                                 </textView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clf-RZ-IBI">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="21"/>
-                                                    <color key="backgroundColor" red="0.13138224223117134" green="0.13138224223117134" blue="0.13138224223117134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="clf-RZ-IBI" firstAttribute="leading" secondItem="vdr-s5-vdZ" secondAttribute="leading" id="9M1-Gi-Vbc"/>
                                             <constraint firstItem="tH3-ya-Vg8" firstAttribute="top" secondItem="vdr-s5-vdZ" secondAttribute="top" constant="20" id="BcI-VA-S3V"/>
                                             <constraint firstAttribute="trailing" secondItem="clf-RZ-IBI" secondAttribute="trailing" id="Kcd-Z0-zV6"/>
                                             <constraint firstItem="clf-RZ-IBI" firstAttribute="top" secondItem="vdr-s5-vdZ" secondAttribute="top" id="VlW-iX-ynr"/>
                                             <constraint firstAttribute="trailing" secondItem="tH3-ya-Vg8" secondAttribute="trailing" id="YmS-Nd-B5f"/>
+                                            <constraint firstAttribute="bottom" secondItem="tH3-ya-Vg8" secondAttribute="bottom" constant="34" id="kLe-hk-twQ"/>
                                             <constraint firstItem="tH3-ya-Vg8" firstAttribute="leading" secondItem="vdr-s5-vdZ" secondAttribute="leading" id="kzD-EN-eSp"/>
-                                            <constraint firstAttribute="bottom" secondItem="tH3-ya-Vg8" secondAttribute="bottom" id="qVz-Lg-9V7"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="myTextView" destination="tH3-ya-Vg8" id="adW-kC-r8i"/>
@@ -264,10 +260,10 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TdR-Qj-DC8" firstAttribute="top" secondItem="nYh-Qa-5fn" secondAttribute="top" constant="44" id="9gm-6B-GPX"/>
                             <constraint firstItem="TdR-Qj-DC8" firstAttribute="trailing" secondItem="nYh-Qa-5fn" secondAttribute="trailing" id="Hhc-wP-s9L"/>
@@ -443,7 +439,6 @@
                                 <rect key="frame" x="20" y="135" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -488,19 +483,68 @@
                                 <rect key="frame" x="0.0" y="552" width="414" height="212"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXm-LL-spS">
-                                        <rect key="frame" x="8" y="88" width="36" height="37"/>
+                                        <rect key="frame" x="8" y="87" width="36" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button" image="redCircle.png"/>
+                                        <connections>
+                                            <action selector="redButton:" destination="pnv-E5-MTV" eventType="touchUpInside" id="dci-Yy-0uW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6j-fJ-JG2">
                                         <rect key="frame" x="52" y="87" width="36" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button" image="orangeCircle.png"/>
+                                        <connections>
+                                            <action selector="orrangeButton:" destination="pnv-E5-MTV" eventType="touchUpInside" id="gSl-JA-INr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoD-aH-21X">
-                                        <rect key="frame" x="96" y="88" width="38" height="37"/>
+                                        <rect key="frame" x="96" y="85" width="38" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button" image="yellowCircle.png"/>
+                                        <connections>
+                                            <action selector="yellowButton:" destination="pnv-E5-MTV" eventType="touchUpInside" id="ZqU-WL-fhx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEN-rp-REg">
+                                        <rect key="frame" x="142" y="85" width="38" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="blueCircle.png"/>
+                                        <connections>
+                                            <action selector="blueButton:" destination="pnv-E5-MTV" eventType="touchUpInside" id="fzN-Fn-SgT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vk-2c-6uD">
+                                        <rect key="frame" x="188" y="85" width="38" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="greenCircle.png"/>
+                                        <connections>
+                                            <action selector="greenButton:" destination="pnv-E5-MTV" eventType="touchUpInside" id="Mij-vo-sKY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFF-vo-9tC">
+                                        <rect key="frame" x="234" y="85" width="38" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="purple.png"/>
+                                        <connections>
+                                            <action selector="purpleButton:" destination="pnv-E5-MTV" eventType="touchUpInside" id="7aX-Kn-8SA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuX-Gv-ZNT">
+                                        <rect key="frame" x="280" y="85" width="38" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="magenta.png"/>
+                                        <connections>
+                                            <action selector="magentaButton:" destination="pnv-E5-MTV" eventType="touchUpInside" id="KSP-dh-xpX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezp-p8-KnO">
+                                        <rect key="frame" x="326" y="85" width="38" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="brown.png"/>
+                                        <connections>
+                                            <action selector="brownButton:" destination="pnv-E5-MTV" eventType="touchUpInside" id="G3D-T0-VbE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -628,15 +672,19 @@
     </scenes>
     <resources>
         <image name="backIcon.png" width="225" height="225"/>
+        <image name="blueCircle.png" width="225" height="225"/>
+        <image name="brown.png" width="225" height="225"/>
         <image name="dotHamburger.png" width="225" height="225"/>
+        <image name="greenCircle.png" width="225" height="225"/>
+        <image name="magenta.png" width="225" height="225"/>
         <image name="orangeCircle.png" width="225" height="225"/>
+        <image name="purple.png" width="167" height="167"/>
         <image name="redCircle.png" width="225" height="225"/>
         <image name="stickNote.png" width="500" height="500"/>
         <image name="whiteHumburger3.png" width="225" height="225"/>
         <image name="yellowCircle.png" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Qsl-L9-LgL"/>
         <segue reference="rRz-8p-U6a"/>
         <segue reference="Ocw-DU-8GQ"/>
     </inferredMetricsTieBreakers>

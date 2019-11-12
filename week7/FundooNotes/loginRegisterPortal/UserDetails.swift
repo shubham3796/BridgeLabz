@@ -7,9 +7,13 @@ struct Inventory : Codable {
 struct oneNote {
     var note:String
     var oneTitle:String?
-    init(_ title:String,_ note:String) {
+    var color:Int?
+    var index:Int
+    init(_ title:String,_ note:String,_ color:Int,_ index:Int) {
         self.oneTitle = title
         self.note = note
+        self.color = color
+        self.index = index
     }
 }
 
